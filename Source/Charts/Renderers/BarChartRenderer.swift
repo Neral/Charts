@@ -255,6 +255,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 _barShadowRectBuffer.origin.y = viewPortHandler.contentTop
                 _barShadowRectBuffer.size.height = viewPortHandler.contentHeight
                 
+                context.setFillColor(dataSet.barShadowColor.cgColor)
                 if dataProvider.isDrawRoundedBarEnabled
                 {
                     let cornerRadius = CGSize(width: _barShadowRectBuffer.width / 2.0, height: _barShadowRectBuffer.width / 2.0)
@@ -264,7 +265,6 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 }
                 else
                 {
-                    context.setFillColor(dataSet.barShadowColor.cgColor)
                     context.fill(_barShadowRectBuffer)
                 }
             }
@@ -289,6 +289,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                     break
                 }
                 
+                context.setFillColor(dataSet.barShadowColor.cgColor)
                 if dataProvider.isDrawRoundedBarEnabled
                 {
                     let cornerRadius = CGSize(width: barRect.width / 2.0, height: barRect.width / 2.0)
@@ -298,7 +299,6 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 }
                 else
                 {
-                    context.setFillColor(dataSet.barShadowColor.cgColor)
                     context.fill(barRect)
                 }
             }

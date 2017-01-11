@@ -17,6 +17,7 @@ types are aliased to either their UI* implementation (on iOS) or their NS* imple
 	public typealias NSUIGestureRecognizerDelegate = UIGestureRecognizerDelegate
 	public typealias NSUITapGestureRecognizer = UITapGestureRecognizer
 	public typealias NSUIPanGestureRecognizer = UIPanGestureRecognizer
+    public typealias NSUIBezierPath = UIBezierPath
 #if !os(tvOS)
     public typealias NSUIPinchGestureRecognizer = UIPinchGestureRecognizer
     public typealias NSUIRotationGestureRecognizer = UIRotationGestureRecognizer
@@ -229,7 +230,8 @@ types are aliased to either their UI* implementation (on iOS) or their NS* imple
 	public typealias NSUIPinchGestureRecognizer = NSMagnificationGestureRecognizer
 	public typealias NSUIRotationGestureRecognizer = NSRotationGestureRecognizer
 	public typealias NSUIScreen = NSScreen
-
+    public typealias NSUIBezierPath = NSBezierPath
+    
 	/** On OS X there is no CADisplayLink. Use a 60 fps timer to render the animations. */
 	public class NSUIDisplayLink
     {
